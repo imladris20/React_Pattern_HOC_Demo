@@ -9,10 +9,10 @@ function withStyles(Component) {
   };
 }
 
-const Button = () => {
-  return <button>Click me!</button>;
+const Button = (props) => {
+  return <button {...props}>Click me!</button>;
 };
-const Text = () => <p>Hello World!</p>;
+const Text = (props) => <p {...props}>Hello World!</p>;
 
 const StyledButton = withStyles(Button);
 const StyledText = withStyles(Text);
