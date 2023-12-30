@@ -1,25 +1,25 @@
 import withStyles from "./HOC/withStyles";
 import Pokemon from "./Pokemon";
 
-const Button = () => {
-  return <button>Click me!</button>;
+const MyButton = (props) => {
+  return <button {...props}>Click me!</button>;
 };
 
-const Text = () => <p>test</p>;
+const MyText = () => <p>test</p>;
 
-const StyledButton = withStyles(Button);
-const StyledText = withStyles(Text);
+const StyledButton = withStyles(MyButton);
+const StyledText = withStyles(MyText);
 
 const App = () => {
   return (
-    <>
-      <h1 className="m-4 cursor-pointer font-mono text-2xl text-gray-500">
+    <div className="flex flex-col items-center">
+      <h1 className="m-4 font-mono text-2xl text-gray-500">
         React-Pattern-HOC, Demo
       </h1>
       <StyledButton />
       <StyledText />
       <Pokemon />
-    </>
+    </div>
   );
 };
 

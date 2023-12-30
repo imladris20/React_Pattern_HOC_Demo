@@ -1,8 +1,11 @@
 const withStyles = (Component) => {
   return (props) => {
-    const style = "p-2 m-4 bg-blue-300";
     return (
-      <Component className={style} test="#22 F2E is the best" {...props} />
+      <Component
+        className="m-4 bg-blue-300 p-2"
+        test="#22 F2E is the best"
+        {...props}
+      />
     );
   };
 };
