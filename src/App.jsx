@@ -5,14 +5,14 @@ function withStyles(Component) {
       margin: "1rem",
       backgroundColor: "lightblue",
     };
-    return <Component style={style} {...props} />;
+    return <Component style={style} {...props} test="#22 F2E is the best" />;
   };
 }
 
 const Button = (props) => {
   return <button {...props}>Click me!</button>;
 };
-const Text = (props) => <p {...props}>Hello World!</p>;
+const Text = (props) => <p {...props}>{props.test}</p>;
 
 const StyledButton = withStyles(Button);
 const StyledText = withStyles(Text);
