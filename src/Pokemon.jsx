@@ -15,7 +15,7 @@ const Pokemon = (props) => {
 
 const PokemonWithLoader = withLoader(
   Pokemon,
-  "https://pokeapi.co/api/v2/pokemon/25",
+  `https://pokeapi.co/api/v2/pokemon/702`,
 );
 
 export default PokemonWithLoader;
