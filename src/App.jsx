@@ -1,22 +1,30 @@
-import "./App.css";
-// import { Route, Routes } from "react-router-dom";
-// import { useContext } from "react";
-// import Context from "./context/ContextTemplate";
+function withStyles(Component) {
+  return (props) => {
+    const style = {
+      padding: "0.2rem",
+      margin: "1rem",
+      backgroundColor: "lightblue",
+    };
+    return <Component style={style} {...props} />;
+  };
+}
+
+const Button = () => {
+  return <button>Click me!</button>;
+};
+const Text = () => <p>Hello World!</p>;
+
+const StyledButton = withStyles(Button);
+const StyledText = withStyles(Text);
 
 function App() {
-  // const {
-  //   state, function1, function2
-  // } = useContext(Context);
-
   return (
     <>
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes> */}
-      <p className="cursor-pointer font-mono text-2xl text-gray-500">
-        Start Your Project
-      </p>
+      <h1 className="my-3 cursor-pointer font-mono text-2xl text-gray-500">
+        React-Pattern-HOC, Demo
+      </h1>
+      <StyledButton />
+      <StyledText />
     </>
   );
 }
