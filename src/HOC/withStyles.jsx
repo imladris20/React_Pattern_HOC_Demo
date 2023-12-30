@@ -1,11 +1,13 @@
 const withStyles = (Component) => {
   return (props) => {
     const style = {
-      padding: "8px",
+      padding: "16px",
       margin: "16px",
-      backgroundColo: "lightblue",
+      backgroundColor: "lightblue",
+      fontSize: "20px",
+      borderRadius: "8px",
     };
-    return <Component style={style} test="#22 F2E is the best" {...props} />;
+    return <Component style={style} text="#22 F2E is the best" {...props} />;
   };
 };
 
