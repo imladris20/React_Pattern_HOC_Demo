@@ -1,14 +1,14 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function withLoader(Element, url) {
+const withLoader = (Element, url) => {
   return (props) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
       async function getData() {
-        const res = await fetch(url);
-        const data = await res.json();
-        setData(data);
+        const data = await axios.get(url);
+        setData(data.data);
       }
 
       getData();
@@ -20,4 +20,6 @@ export default function withLoader(Element, url) {
 
     return <Element {...props} data={data} />;
   };
-}
+};
+
+export default withLoader;

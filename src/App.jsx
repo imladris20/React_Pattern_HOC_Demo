@@ -1,3 +1,5 @@
+import Ditto from "./Pokemon";
+
 function withStyles(Component) {
   return (props) => {
     const style = {
@@ -20,11 +22,12 @@ const StyledText = withStyles(Text);
 function App() {
   return (
     <>
-      <h1 className="my-3 cursor-pointer font-mono text-2xl text-gray-500">
+      <h1 className="m-4 cursor-pointer font-mono text-2xl text-gray-500">
         React-Pattern-HOC, Demo
       </h1>
       <StyledButton />
       <StyledText />
+      <Ditto />
     </>
   );
 }
