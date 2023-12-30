@@ -1,7 +1,7 @@
 import useDataLoader from "../Hook/useDataLoader";
 
 const withLoader = (Element, url) => {
-  return (props) => {
+  const withLoaderHOC = (props) => {
     const data = useDataLoader(url);
     console.log(data);
     if (!data) {
@@ -10,6 +10,7 @@ const withLoader = (Element, url) => {
 
     return <Element {...props} data={data} />;
   };
+  return withLoaderHOC;
 };
 
 export default withLoader;
