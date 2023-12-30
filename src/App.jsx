@@ -1,4 +1,4 @@
-import Ditto from "./Pokemon";
+import Pokemon from "./Pokemon";
 
 function withStyles(Component) {
   return (props) => {
@@ -27,7 +27,7 @@ function App() {
       </h1>
       <StyledButton />
       <StyledText />
-      <Ditto />
+      <Pokemon />
     </>
   );
 }
