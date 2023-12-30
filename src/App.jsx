@@ -1,3 +1,4 @@
+import DogImagesWithLoader from "./DogImages";
 import withStyles from "./HOC/withStyles";
 import Pokemon from "./Pokemon";
 
@@ -21,6 +22,7 @@ const App = () => {
       <StyledButton />
       <StyledText />
       <Pokemon />
+      <DogImagesWithLoader />
     </div>
   );
 };
