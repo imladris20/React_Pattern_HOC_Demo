@@ -13,7 +13,13 @@ const useDataLoader = (url) => {
       }
     };
 
-    fetchData();
+    if (url === "https://dog.ceo/api/breed/shiba/images/random/6") {
+      setTimeout(fetchData, 8500);
+    } else if (url === "https://digi-api.com/api/v1/digimon?name=agumon") {
+      setTimeout(fetchData, 5000);
+    } else {
+      fetchData();
+    }
   }, [url]);
   return data;
 };
