@@ -1,3 +1,4 @@
+import DigimonImagesWithLoader from "./DigimonImages";
 import DogImagesWithLoader from "./DogImages";
 import withStyles from "./HOC/withStyles";
 import Pokemon from "./Pokemon";
@@ -23,6 +24,7 @@ const App = () => {
       <StyledText />
       <Pokemon />
       <DogImagesWithLoader />
+      <DigimonImagesWithLoader />
     </div>
   );
 };
