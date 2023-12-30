@@ -1,14 +1,13 @@
-import withLoader from "./withLoader";
+import withLoader from "./HOC/withLoader";
 
 const Pokemon = (props) => {
-  console.log("Pokemon", props);
   const { data } = props;
   return (
-    <div className="m-4 flex w-56 flex-col items-center justify-start rounded border border-solid border-gray-400">
+    <div className="m-4 flex w-56 flex-col items-center justify-start rounded border border-solid border-gray-400 p-6">
       <h1 className="my-3 cursor-pointer font-mono text-2xl">{data.name}</h1>
       <img
-        src={data.sprites.other.showdown.front_default}
-        className="m-2 w-52"
+        src={data.sprites.other.showdown["front_default"]}
+        className="w-52"
       />
     </div>
   );
