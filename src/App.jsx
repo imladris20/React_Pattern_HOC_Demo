@@ -22,8 +22,13 @@ const App = () => {
       </h1>
       <StyledButton />
       <StyledText />
+      <h1 className="my-3 cursor-pointer font-mono text-2xl font-bold">
+        咚咚鼠
+      </h1>
       <Pokemon />
+      <h1 className="mt-8 text-3xl font-bold">狗勾</h1>
       <DogImagesWithLoader />
+      <h1 className="mt-8 text-3xl font-bold">亞古獸</h1>
       <DigimonImagesWithLoader />
     </div>
   );
